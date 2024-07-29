@@ -11,10 +11,6 @@ GITHUB_REPO="https://github.com/dadapunk/testAzureDevops.git"
 GITHUB_FOLDER="testAzureDevops"
 AZURE_FOLDER="TestGitSync"
 AZURE_REPO="https://$AZUSERNAME:$AZUREPAT@dev.azure.com/$AZORG/$AZURE_FOLDER/_git/$AZURE_FOLDER"
-# Remove the existing directory if it exists
-if [ -d "$AZURE_FOLDER" ]; then
-  rm -rf $AZURE_FOLDER
-fi
 # Clone the GitHub repository
 git clone $GITHUB_REPO
 # Navigate to the cloned repository and remove the .git directory
